@@ -53,15 +53,14 @@
             </a-entity>
         </a-entity>
 
-        <!-- Box per attivare l'enigma 1 -->
-        <a-box id="SolarEnigma" position="0.50257 1.13617 -2.30132" color="blue" opacity="0"
-            scale="1.40547 0.75547 0.79547" class="clickable" onclick="showQuestion()"></a-box>
+       <!-- Box per attivare l'enigma 1 -->
+      <a-box id="SolarEnigma" position="-0.817 2.026 -3.381" color="blue" opacity="0" scale="1.405 1.045 1.305" class="clickable" onclick="showQuestion()" visible="false"></a-box>
 
         <!--Scena 1-->
-        <a-entity id="questionBox" position="0.50257 1.13617 -2.30132" rotation="0 180 0" visible="false">
+        <a-entity id="questionBox" position="0.523 0.916 -2.151" visible="false">
             <a-text value="Ho un cuore gassoso e freddo, adornato di cerchi splendenti,
             ma non sono il piu' vicino ne' il piu' lontano dal sole ardente.
-            Chi sono?" align="center" position="0 2 0" color="black"></a-text>
+            Chi sono?" align="center" position="0 2.5 0" color="black"></a-text>
             <a-entity id="answer1" geometry="primitive: plane; height: 0.5; width: 1.5" material="color: #4CAF50"
                 position="0 1.5 0" class="clickable" onclick="checkAnswer('1')">
                 <a-text value="Pluto" align="center" position="" color="white"></a-text>
@@ -81,7 +80,7 @@
             <a-text value="Ottimo lavoro! Saturno e i suoi ANELLI nascondono il segreto che porta all'ultimo enigma."
                 align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
-        <a-entity id="wrongAnswerScreen" position="-0.5 1.86 0.71" rotation="0 180 0 visible=" false">
+        <a-entity id="wrongAnswerScreen" position="-0.5 1.86 0.71" rotation="0 180 0" visible="false">
             <a-plane width="4" height="2" color="red" opacity="0.8"></a-plane>
             <a-text
                 value="Ops! Non risolvendo questo enigma in tempo, la stanza resterà chiusa e non potrai completare con successo."
@@ -90,21 +89,17 @@
         <!--Scena 1 -->
 
         <!--Box per attivare l'enigma 2-->
-        <a-box id="DnaEnigma" position="-2.377 1.126 -2.301" color="blue" opacity="0" scale="1.405 0.755 0.795"
-            class="clickable" onclick="showQuestion2()"></a-box>
+     <a-box id="DnaEnigma" position="-0.867 1.126 3.149" color="blue" opacity="0" scale="1.405 0.755 0.795" visible="false" class="clickable" onclick="showQuestion2()"></a-box>
         <!--Scena 2-->
-        <a-entity id="question2Box" position="-2.377 1.126 -2.301" rotation="0 180 0" visible="false">
+       <a-entity id="question2Box" position="-1.047 1.226 3.349" rotation="0 180 0" visible="false" scale="1.02 1 1">
             <a-text value="L'acronimo DNA sta per?" align="center" position="0 2 0" color="black"></a-text>
-            <a-entity id="answer1" geometry="primitive: plane; height: 0.5; width: 1.5" material="color: #4CAF50"
-                position="0 1.5 0" class="clickable" onclick="checkAnswerr('1')">
+            <a-entity id="answerr1" geometry="primitive: plane; height: 0.5; width: 3" material="color: #4CAF50" position="0 1.5 0" class="clickable" onclick="checkAnswerr('1')">
                 <a-text value="Dinamica Nucleica Acida" align="center" position="" color="white"></a-text>
             </a-entity>
-            <a-entity id="answer2" geometry="primitive: plane; height: 0.5; width: 1.5" material="color: #F44336"
-                position="0 1 0" class="clickable" onclick="checkAnswerr('2')">
+            <a-entity id="answerr2" geometry="primitive: plane; height: 0.5; width: 3" material="color: #F44336" position="0 1 0" class="clickable" onclick="checkAnswerr('2')">
                 <a-text value="Acido Deossiribonucleico" align="center" position="" color="white"></a-text>
             </a-entity>
-            <a-entity id="answer3" geometry="primitive: plane; height: 0.5; width: 1.5" material="color: #FFC107"
-                position="0 0.5 0" class="clickable" onclick="checkAnswerr('3')">
+            <a-entity id="answerr3" geometry="primitive: plane; height: 0.5; width: 3" material="color: #FFC107" position="0 0.5 0" class="clickable" onclick="checkAnswerr('3')">
                 <a-text value="Deossiribonucleico Acido" align="center" position="" color="white"></a-text>
             </a-entity>
         </a-entity>
