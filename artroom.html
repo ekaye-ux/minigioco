@@ -94,7 +94,7 @@
         <a-entity id="correctAnswerScreen" position="-2.5 2 -1.7" visible="false">
             <a-plane width="4" height="2" color="green" opacity="0.8"></a-plane>
             <a-text
-                value="Risposta corretta! Hai trovato un indizio nascosto: guarda il dipinto. Ora passando dal deserto, viaggia nello SPAZIO e torna nella tua classe per scoprire l'ultima avventura!"
+                value="Risposta corretta! Hai trovato un indizio nascosto: guarda il dipinto. Ora viaggia nello SPAZIO e scopri l'ultima stanza della tua avventura!"
                 align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <a-entity id="wrongAnswerScreen" position="-2.5 2 -1.7" visible="false">
@@ -103,9 +103,9 @@
                 position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <!--Box per tornare nell'aula didattica-->
-        <a-box position="1.93406 1.44189 4.84138" scale="-0.21178 1.835 2.84624" color="white" opacity="0"
-            rotation="30.5334938603167 89.29375349775343 -7.7016986821485265" class="clickable"
-            onclick="goToClassRoom()"></a-box>
+        <a-box position="2.20815 1.04599 -0.60179" scale="1.23 1.77 1.18436"
+            rotation="15.929945578022279 -125.9573228081748 -0.31226199834629864" color="white" opacity="0"
+         class="clickable" onclick="goToClassRoom()"></a-box>
     </a-scene>
 
     <script>
@@ -222,7 +222,7 @@
 
         //Funzione per andare alla stanza precedente
         function goToClassRoom() {
-            window.location.href = 'classroom.html';
+            window.location.href = 'chemlab.html';
         }
 
     </script>
