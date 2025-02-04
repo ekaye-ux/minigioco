@@ -1,13 +1,3 @@
-AFRAME.registerComponent('frame-rate-limiter', {
-    tick: function (time, deltaTime) {
-        
-        if (deltaTime < 1000 / 90) {
-            return; 
-        }
-        
-    }
-});
-
 let startTime = null;
 let timerInterval = null;
 
