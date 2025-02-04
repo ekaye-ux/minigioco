@@ -44,7 +44,7 @@
             rotation="0 89.92286115680706 0">
             <a-plane width="4" height="2" color="black" opacity="0.8"></a-plane>
             <a-text
-                value="Congratulazioni! Hai sbloccato l'ultima stanza segreta. Il tempo scorre inesorabilmente! Non lasciare che i tuoi sforzi vengano sprecati!"
+                value="Congratulazioni! Hai sbloccato l'ultima stanza segreta."
                 align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
             <!-- Pulsante "Continue" -->
             <a-entity id="continueButton" geometry="primitive: plane; height: 0.5; width: 2" material="color: #4CAF50"
@@ -59,7 +59,7 @@
        <a-entity id="questionBox" position="-1.037 0.496 -1.951" rotation="" visible="false">
             <a-text value="Ho un cuore gassoso e freddo, adornato di cerchi splendenti,
             ma non sono il piu' vicino ne' il piu' lontano dal sole ardente.
-            Chi sono?" align="center" position="0 3 0" color="black"></a-text>
+            Chi sono?" align="center" position="0 2 0" color="black"></a-text>
             <a-entity id="answer1" geometry="primitive: plane; height: 0.5; width: 1.5" material="color: #4CAF50" position="0 1.5 0" class="clickable" onclick="checkAnswer('1')">
                 <a-text value="Pluto" align="center" position="" color="white"></a-text>
             </a-entity>
@@ -73,11 +73,11 @@
         <!-- Schermata di conferma risposta corretta -->
      <a-entity id="correctAnswerScreen" position="-3.2 3.32 0.7" visible="false" scale="1.338 1.338 1.338" rotation="0 89.92300000000002 0">
             <a-plane width="4" height="2" color="green" opacity="0.8"></a-plane>
-            <a-text value="Ottimo lavoro! Saturno e i suoi ANELLI nascondono il segreto che porta all'ultimo enigma." align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
+            <a-text value="Risposta corretta." align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <a-entity id="wrongAnswerScreen" position="-3.2 3.32 0.7" visible="false" scale="1.33794 1.33794 1.33794" rotation="0 89.92286115680706 0">
             <a-plane width="4" height="2" color="red" opacity="0.8"></a-plane>
-            <a-text value="Ops! Non risolvendo questo enigma in tempo, la stanza resterà chiusa e non potrai completare con successo." align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
+            <a-text value="Risposta sbagliata" align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <!--Scena 1 -->
 
@@ -100,13 +100,13 @@
         <a-entity id="correctAnswerrScreen" position="-3.2 3.32 0.7" scale="1.33794 1.33794 1.33794"
             rotation="0 89.92286115680706 0" visible="false">
             <a-plane width="4" height="2" color="black" opacity="0.8"></a-plane>
-            <a-text value="Congratulazioni! Hai completato in tempo la sfida! Ora sei libero" align="center"
+            <a-text value="Congratulazioni! Hai completato la sfida!" align="center"
                 position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <a-entity id="wrongAnswerrScreen" position="-3.2 3.32 0.7" scale="1.33794 1.33794 1.33794"
             rotation="0 89.92286115680706 0" visible="false">
             <a-plane width="4" height="2" color="red" opacity="0.8"></a-plane>
-            <a-text value="Oh no! Hai sbagliato risposta, rimarrai bloccata in questa stanza per sempre!" align="center"
+            <a-text value="Hai sbagliato risposta, rimarrai bloccata in questa stanza." align="center"
                 position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
     </a-scene>
