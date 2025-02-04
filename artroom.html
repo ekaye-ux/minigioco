@@ -52,7 +52,7 @@
             rotation="0 89.92286115680706 0">
             <a-plane width="4" height="2" color="black" opacity="0.8"></a-plane>
             <a-text
-                value="Congratulazioni! Hai sbloccato una stanza segreta. Risolvi il mistero in 60 secondi per tornare nell'aula precedente!"
+                value="Congratulazioni! Hai sbloccato una stanza segreta. Risolvi il mistero!"
                 align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
             <!-- Pulsante "Continue" -->
             <a-entity id="continueButton" geometry="primitive: plane; height: 0.5; width: 2" material="color: #4CAF50"
@@ -69,19 +69,19 @@
             <a-plane position="0 1 0" width="3" height="1" material="color: white; side: double" opacity="0"></a-plane>
             <a-text
                 value="Dipingevo la realta', ma non cosi come era: la mia visione era deformata, spesso inquietante. Le mie opere parlano di orologi molli e di sogni"
-                align="center" position="0 1 0" color="black"></a-text>
+                align="center" position="0 2 0" color="black"></a-text>
             <!-- Risposte -->
             <a-entity id="answer1" geometry="primitive: plane; height: 0.5; width: 2"
-                material="color: #4CAF50; side: double" position="0 0.2 0" class="clickable" onclick="checkAnswer('1')">
+                material="color: #4CAF50; side: double" position="0 1 0" class="clickable" onclick="checkAnswer('1')">
                 <a-text value="Salvador Dali" align="center" position="0 0 0.01" color="white"></a-text>
             </a-entity>
             <a-entity id="answer2" geometry="primitive: plane; height: 0.5; width: 2"
-                material="color: #F44336; side: double" position="0 -0.2 0" class="clickable"
+                material="color: #F44336; side: double" position="0 0.5 0" class="clickable"
                 onclick="checkAnswer('2')">
                 <a-text value="Leonardo Da Vinci" align="center" position="0 0 0.01" color="white"></a-text>
             </a-entity>
             <a-entity id="answer3" geometry="primitive: plane; height: 0.5; width: 2"
-                material="color: #FFC107; side: double" position="0 -0.6 0" class="clickable"
+                material="color: #FFC107; side: double" position="0 0 0" class="clickable"
                 onclick="checkAnswer('3')">
                 <a-text value="Frida Kahlo" align="center" position="0 0 0.01" color="white"></a-text>
             </a-entity>
@@ -94,18 +94,18 @@
         <a-entity id="correctAnswerScreen" position="-2.5 2 -1.7" visible="false">
             <a-plane width="4" height="2" color="green" opacity="0.8"></a-plane>
             <a-text
-                value="Risposta corretta! Hai trovato un indizio nascosto: guarda il dipinto. Ora viaggia nello SPAZIO e scopri l'ultima stanza della tua avventura!"
+                value="Risposta corretta! Hai trovato un indizio nascosto: guarda il dipinto."
                 align="center" position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <a-entity id="wrongAnswerScreen" position="-2.5 2 -1.7" visible="false">
             <a-plane width="4" height="2" color="red" opacity="0.8"></a-plane>
-            <a-text value="Oh no! Hai sbagliato risposta, rimarrai bloccata in questa stanza per sempre!" align="center"
+            <a-text value="Hai sbagliato risposta." align="center"
                 position="0 0.5 0.01" color="white" width="3"></a-text>
         </a-entity>
         <!--Box per tornare nell'aula didattica-->
         <a-box position="2.20815 1.04599 -0.60179" scale="1.23 1.77 1.18436"
             rotation="15.929945578022279 -125.9573228081748 -0.31226199834629864" color="white" opacity="0"
-         class="clickable" onclick="goToClassRoom()"></a-box>
+         class="clickable" onclick="goToChemlab()"></a-box>
     </a-scene>
 
     <script>
@@ -221,7 +221,7 @@
 
 
         //Funzione per andare alla stanza precedente
-        function goToClassRoom() {
+        function goToChemlab() {
             window.location.href = 'chemlab.html';
         }
 
