@@ -8,35 +8,30 @@ AFRAME.registerComponent('frame-rate-limiter', {
     }
 });
 
-let countdownTime = 600;
+let startTime = null;
 let timerInterval = null;
 
-function startCountdown() {
-    let remainingTime = sessionStorage.getItem('remainingTime') 
-        ? parseInt(sessionStorage.getItem('remainingTime'), 10) 
-        : countdownTime;
+function startTimer() {
+    if (!sessionStorage.getItem('startTime')) {
+        sessionStorage.setItem('startTime', Date.now());
+    }
+    startTime = parseInt(sessionStorage.getItem('startTime'), 10);
 
     const timerElement = document.querySelector('#timer');
 
     timerInterval = setInterval(() => {
-        if (remainingTime <= 0) {
-            clearInterval(timerInterval);
-            timerElement.setAttribute('text', 'value: Tempo scaduto!; align: center; color: red');
-            
-            return;
-        }
+        const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        const minutes = Math.floor(elapsedTime / 60);
+        const seconds = elapsedTime % 60;
 
-        remainingTime--;
-        sessionStorage.setItem('remainingTime', remainingTime);
-
-        const minutes = Math.floor(remainingTime / 60);
-        const seconds = remainingTime % 60;
         timerElement.setAttribute('text', `value: Tempo: ${minutes}m ${seconds}s; align: center; color: white`);
     }, 1000);
 }
 
-// Avvia il countdown al caricamento della pagina
-document.addEventListener('DOMContentLoaded', startCountdown);
+// Avvia il timer al caricamento della pagina
+document.addEventListener('DOMContentLoaded', () => {
+    startTimer();
+});
 
 
 
